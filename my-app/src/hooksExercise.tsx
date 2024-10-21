@@ -59,7 +59,7 @@ export function Favorite({noteId, isFavorite, toggleFav}: properties){
     }
 
     return (
-        <button className = {`favorite-button ${isFavorite ? 'favorited' : ''}`} onClick={() => toggleFav(noteId)}>
+        <button className = {`favorite-button ${isFavorite ? 'favorited' : ''}`} onClick={() => toggleFav(noteId)} data-testid={`favorite-${noteId}`}>
           {isFavorite ? '❤️' : '♡'}
         </button>
       );
